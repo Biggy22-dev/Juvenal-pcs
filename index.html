@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUVENAL PCS</title>
+    <script type="text/javascript"
+        src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=BkUCZ41-pJhLm0PKgMcMZ8lJMw315gXgZWuBrm-FYaZU7_YFC0oTNLEKFbV2PL5r-EjPCXS3FTsQfX4Q09-P0w"
+        charset="UTF-8"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="robot">🤖</div>
+            <div class="brand">
+                <div class="brand-name">JUVENAL PCS</div>
+                <div class="online">🟢 En ligne</div>
+            </div>
+        </div>
+
+        <div class="intro">
+            <h2>Bienvenue 👋</h2>
+            <p>Bienvenue sur la page officielle de <strong>Juvenal Pcs</strong> ! Si tu es ici, c’est que tu souhaites
+                récupérer le bot qui me permet de gagner des millions chaque jour 💰🔥 Choisis l’option qui te convient
+                et mon assistant te guidera étape par étape pour avoir accès gratuitement à ce bot ✅</p>
+        </div>
+
+        <div class="voice-box">
+            <button class="voice-play" onclick="toggleVoice()" id="voiceButton">▶</button>
+            <audio id="jeffVoice" preload="metadata">
+                <source src="./audio/" type="audio/mp4">
+            </audio>
+            <div class="voice-content">
+                <div class="wave" id="voiceWave" onclick="seekVoice(event)">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="voice-progress" onclick="seekVoice(event)">
+                    <div class="voice-progress-bar" id="voiceProgress"></div>
+                </div>
+                <div class="voice-time"><span id="voiceCurrent">0:00</span><span id="voiceTotal">2:41</span></div>
+            </div>
+            <button class="voice-speed" id="voiceSpeed" type="button" onclick="changeVoiceSpeed()">1x</button>
+        </div>
+
+        <div class="questions">
+            <button class="question-btn"
+                onclick="askQuestion('🍎 Comment gagner à Apple of Fortune ?',startAppleChat)">🍎 <span
+                    class="question-icon">Comment gagner à Apple of Fortune ?</span></button>
+            <button class="question-btn" onclick="askQuestion('🎲 Comment gagner au Jeu des Dés ?',startDiceChat)">🎲
+                <span class="question-icon">Comment gagner au Jeu des Dés ?</span></button>
+            <button class="question-btn"
+                onclick="askQuestion('⚽ Comment gagner les scores exacts FIFA ?',startFifaChat)">⚽ <span
+                    class="question-icon">Comment gagner les scores exacts FIFA ?</span></button>
+           <!--<button class="question-btn" onclick="askQuestion('✈️ Comment gagner Aviator ?',startAviatorChat)">✈️ <span
+                    class="question-icon">Comment gagner Aviator ?</span></button>
+            <button class="question-btn" onclick="askQuestion('🚀 Comment gagner Lucky Jet ?',startLuckyJetChat)">🚀
+                <span class="question-icon">Comment gagner Lucky Jet ?</span></button>
+                <button class="question-btn" onclick="askQuestion('💎 Comment gagner Mine Classic ?',startMineChat)">💎
+                <span class="question-icon">Comment gagner Mine Classic ?</span></button>--> 
+            <button class="question-btn" onclick="askQuestion('💥 Comment gagner Crash ?',startCrashChat)">💥 <span
+                    class="question-icon">Comment gagner Crash ?</span></button>
+            
+            <button class="question-btn" onclick="askQuestion('📝 Comment s’inscrire ?',startRegistrationChat)">📝 <span
+                    class="question-icon">Comment s’inscrire ?</span></button>
+            <button class="question-btn" onclick="startExistingAccountChat()">👤 J’ai déjà compte</button>
+            <button class="question-btn" onclick="startCantRegisterChat()">❌ Je n’arrive pas à m’inscrire</button>
+        </div>
+
+        <div class="chat-box" id="chatBox">
+            <div id="chatMessages" class="chat-messages chat-collapsed"></div>
+            <div class="chat-input-row"><input id="chatInput" class="chat-input" type="text"
+                    placeholder="Écris ta question ici..." onfocus="revealChat()" oninput="revealChat()"
+                    onkeydown="handleEnter(event)"><button class="send-btn" onclick="sendMessage()">➤</button></div>
+        </div>
+
+        <div id="content" class="content"></div>
+
+        <div class="platform-section" id="platformSection">
+            <div class="platform-heading"><span>🔗 PLATEFORMES & CODE PROMO</span><button class="reduce-btn"
+                    id="platformReduceBtn" type="button" onclick="togglePlatforms()">Réduire</button></div>
+            <div class="platforms" id="platformsGrid">
+                <a class="platform xbet"
+                    href="https://reffpa.com/L?tag=d_4215855m_97c_&site=4215855&ad=97&r=registration"
+                    target="_blank"><span class="platform-icon">1X</span>1XBET</a>
+                <a class="platform paripesa" href="https://paripesa.bet/christtpronoso" target="_blank"><span
+                        class="platform-icon">P</span>PARIPESA</a>
+                <a class="platform winwin" href="https://slim.link/qxyZnTd" target="_blank"><span
+                        class="platform-icon">W</span>WINWIN</a>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <div class="bottom-row">
+                <button class="promo"
+                    onclick="navigator.clipboard&&navigator.clipboard.writeText(PROMO_CODE);this.querySelector('.promo-code').textContent='COPIÉ ✓';setTimeout(()=>this.querySelector('.promo-code').textContent=PROMO_CODE,1400)"
+                    title="Copier le code promo"><span class="promo-small">CODE PROMO</span><span
+                        class="promo-code">BK32</span></button>
+                <a class="whatsapp" href="https://wa.me/22996408379" target="_blank">◉ &nbsp; Mon WhatsApp<span
+                        class="contact-number">+229 96 40 83 79</span></a>
+            </div>
+            <a class="channel" style="display:block;margin-top:10px"
+                href="https://whatsapp.com/channel/0029VbBBCVf3WHTgZv7xb62r" target="_blank">📢 Rejoindre ma chaîne
+                WhatsApp</a>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
