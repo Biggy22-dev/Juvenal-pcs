@@ -24,7 +24,7 @@ function toggleVoice() {
   if (a.paused) {
     a.play()
       .then(() => (b.textContent = "Ⅱ"))
-      .catch(() => (b.textContent = "▶"));
+      .catch(() => (b.textContent = "▶"))
   } else {
     a.pause();
     b.textContent = "▶";
